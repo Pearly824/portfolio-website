@@ -1,45 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearly Nchifor | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="fontawesome-free-6.7.1-web/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Showcasing my web development skills and projects</p>
-  </header>
-  
-  <section class="projects">
-    <div class="project">
-      <h3>Portfolio Website</h3>
-      <p>A personal website to showcase my web development skills, including HTML, CSS, JavaScript, and React. It contains sections for my resume, skills, projects, and contact form.</p>
-      <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, React</p>
-      <a href="https://yourusername.github.io/portfolio" target="_blank">View Live Project</a>
-      <a href="https://github.com/yourusername/portfolio" target="_blank">View on GitHub</a>
-    </div>
-    
-    <div class="project">
-      <h3>To-Do List Application</h3>
-      <p>A simple to-do list app where users can add, remove, and mark tasks as completed. The app uses local storage to save tasks, ensuring they persist even after the page is reloaded.</p>
-      <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
-      <a href="https://yourusername.github.io/todolist" target="_blank">View Live Project</a>
-      <a href="https://github.com/yourusername/todolist" target="_blank">View on GitHub</a>
-    </div>
-  
-    <div class="project">
-      <h3>Weather Forecast Application</h3>
-      <p>Weather app that shows current weather based on user location or search input, using OpenWeather API.</p>
-      <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, OpenWeather API</p>
-      <a href="https://yourusername.github.io/weather-app" target="_blank">View Live Project</a>
-      <a href="https://github.com/yourusername/weather-app" target="_blank">View on GitHub</a>
-    </div>
-  </section>
+    <!-- Header -->
+    <header id="home">
+        <nav>
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#portfolio"><i class="fas fa-laptop-code"></i> Portfolio</a></li>
+                <li><a href="#services"><i class="fas fa-hands-helping"></i> Services</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i></a> Contact</li>
+                <li><a href="#blog"><i class="fas fa-blog"></i> Blog</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Hi, I'm <span>Pearly Nchifor</span></h1>
+            <p>A passionate Software Engineer, Educator, and Content Creator. <i class="fas fa-smile"></i></p>
+            <button onclick="window.location='#contact'">Get in Touch</button>
+        </div>
+    </header>
 
-  <footer>
-    <p>Made with 💻 by Pearly Nchifor</p>
-  </footer>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="img.png" alt="Pearly Nchifor" class="profile-photo">
+        <p>
+            I’m Pearly Nchifor, a dedicated web developer and tutor with a passion for crafting seamless, intuitive digital experiences. With expertise in HTML, CSS, JavaScript, and React, I bring ideas to life through clean, efficient code.
+
+In addition to web development, I offer English and Math tutoring to help students build confidence and achieve their academic goals. I’m committed to making learning engaging and accessible.
+
+Outside of coding and teaching, I enjoy singing, dancing, and expressing creativity in various forms.
+        </p>
+        <ul>
+            <li>Skills: HTML, CSS, JavaScript, React, C, C++, GitHub</li>
+            <li>Hobbies: Coding Challenges and Open Source Contribution, Writing Stories and Essays, Reading, Teaching</li>
+        </ul>
+    </section>
+
+    <!-- Portfolio Section -->
+<!-- Portfolio Section -->
+<section id="portfolio">
+    <h2>My Work</h2>
+
+    <!-- Web Development Projects -->
+    <section id="web-development">
+        <h3>Web Development Projects</h3>
+
+        <!-- Calculator -->
+        <div class="project">
+            <h4>Project: Calculator</h4>
+            <div id="calculator"></div>
+        </div>
+
+        <!-- To-Do List -->
+        <div class="project">
+            <h4>Project: To-Do List App</h4>
+            <div id="todo-app"></div>
+        </div>
+
+        <!-- Recipe Finder App -->
+        <div class="project">
+            <h4>Project: Recipe Finder App</h4>
+            <p>Find Delicious Recipes</p>
+               <!-- Recipe Finder -->
+                <div id="recipe-finder">
+                    <input id="recipe-search" type="text" placeholder="Search for a recipe">
+                    <button onclick="findRecipe()">Search</button>
+                    <div id="recipe-results"></div>
+                </div>
+        </div>
+
+        <!-- Weather Forecast -->
+        <div class="project">
+            <h4>Project: Weather Forecast</h4>
+             <!-- Weather Forecast -->
+                <div id="weather-forecast">
+                    <input id="weather-search" type="text" placeholder="Enter city for weather">
+                    <button onclick="getWeather()">Get Weather</button>
+                    <div id="weather-result"></div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Tutoring Projects -->
+    <section id="tutoring">
+        <h3>Tutoring Projects</h3>
+
+        <!-- Interactive Math Quiz -->
+        <div class="project">
+            <h4>Project: Interactive Math Quiz</h4>
+                <div id="math-quiz"> math
+                    <h4>Answer the following question:</h4>
+                    <p id="math-question">Loading question...</p>
+                    <input id="math-answer" type="text" placeholder="Your answer">
+                    <button onclick="checkMathAnswer()">Submit</button>
+                    <div id="math-result"></div>
+                    <p id="math-score">Score: 0</p>
+                </div>
+            
+        <!-- English Grammar Checker -->
+        <div class="project">
+            <h4>Project: English Grammar Checker</h4>
+            <div id="grammar-checker"><!-- English Grammar Checker -->
+                <div id="grammar-checker">
+                    <textarea id="grammar-input" placeholder="Enter text to check grammar"></textarea>
+                    <button onclick="checkGrammar()">Check Grammar</button>
+                    <div id="grammar-result"></div>
+                </div>
+                </div>
+        </div>
+    </section>
+</section>
+
+
+    <!-- Services Section -->
+            <section id="services" class="fade-in">
+                <h2>My Services</h2>
+                <div class="services-container">
+                    <!-- Web Development Section -->
+                    <div class="service-item">
+                        <h3>Web Development</h3>
+                        <ul>
+                            <li><strong>Custom Website Design:</strong> Creating personalized, responsive websites tailored to meet client needs.</li>
+                            <li><strong>Frontend Development:</strong> Utilizing HTML, CSS, JavaScript, and React to build dynamic, user-friendly interfaces.</li>
+                            <li><strong>Backend Development:</strong> Implementing server-side functionality for full-stack web applications.</li>
+                            <li><strong>Web App Development:</strong> Designing web applications with seamless interactivity.</li>
+                            <li><strong>Website Optimization:</strong> Improving website speed, SEO, and mobile responsiveness.</li>
+                        </ul>
+                    </div>
+            
+                    <!-- Tutoring Services Section -->
+                    <div class="service-item">
+                        <h3>Tutoring Services</h3>
+                        <ul>
+                            <li><strong>English Tutoring:</strong> Offering personalized lessons for grammar, writing, creative writing, essay composition, and proofreading.</li>
+                            <li><strong>Math Tutoring:</strong> Helping students with problem-solving, concepts, and techniques across various levels of mathematics.</li>
+                            <li><strong>Content Writing:</strong> Providing high-quality, well-researched articles, essays, and blog posts.</li>
+                            <li><strong>Proofreading & Editing:</strong> Helping students and professionals polish their written content for clarity and accuracy.</li>
+                        </ul>
+                    </div>
+            
+                    <!-- Software Engineering Section -->
+                    <div class="service-item">
+                        <h3>Software Engineering</h3>
+                        <ul>
+                            <li><strong>Software Development:</strong> Building efficient, scalable software solutions using C, C++, and other technologies.</li>
+                            <li><strong>Problem Solving & Algorithm Design:</strong> Teaching and guiding through algorithms, data structures, and problem-solving techniques.</li>
+                            <li><strong>Technical Consultation:</strong> Offering advice on best practices in software development and architecture.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <img src="image3.jpeg" alt="Pearly Nchifor" class="contact-photo">
+        <p><i class="fas fa-phone"></i> Phone: +237 654811698</p>
+        <p><i class="fas fa-envelope"></i> Email: pearlynchifor0@gmail.com</p>
+        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="#">Pearly Nchifor</a></p>
+    </section>
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>My Blog</h2>
+        <p>Coming soon! Stay tuned for insights and tutorials on web development, English proficiency, and math tricks.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Pearly Nchifor. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

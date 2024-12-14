@@ -1,0 +1,206 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#about-me {
+    text-align: center;
+    padding: 40px;
+}
+
+.profile-photo {
+    width: 150px;          /* Set width */
+    height: 150px;         /* Set height */
+    border-radius: 50%;    /* Round the image to make it circular */
+    object-fit: cover;     /* Ensure the image covers the circle area */
+    margin-bottom: 20px;   /* Space between the image and text */
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    background: #f4f4f4;
+    margin: 20px 0;
+    transition: all 0.5s;
+}
+
+.project {
+    margin-bottom: 20px;
+    animation: fadeIn 2s;
+}
+
+nav ul li a i {
+    margin-right: 5px; /* Space between icon and text */
+    font-size: 18px; /* Adjust icon size */
+    color: #e5ebf1; /* Change icon color */
+    transition: color 0.3s ease; /* Add hover effect */
+}
+
+nav ul li a:hover i {
+    color: #52085c; /* Change icon color on hover */
+}
+
+
+/* Header Styling */
+header {
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Font Updates */
+h1, h2, h3 {
+    font-weight: 600;
+}
+/* Navigation Menu */
+nav ul {
+    display: flex; /* Align items horizontally */
+    list-style: none; /* Remove bullet points */
+    justify-content: center; /* Center the menu items */
+    padding: 0;
+    margin: 0;
+    gap: 15px; /* Add space between menu items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcb05; /* Highlight color on hover */
+}
+#services {
+    background-color: #f4f4f4; /* Light background color */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.service-item ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+.service-item ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.service-item:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+.service-item:hover ul li {
+    color: #4a90e2; /* Change text color on hover */
+}
+
+.contact-photo {
+    width: 150px;          /* Set width */
+    height: 150px;         /* Set height */
+    border-radius: 50%;    /* Round the image to make it circular */
+    object-fit: cover;     /* Ensure the image covers the circle area */
+    margin-bottom: 20px;   /* Space between the image and text */
+}
+
+/* Web Development Projects */
+#web-development .project {
+    background-color: #f0f0f0; /* Lighter background for Web Development projects */
+    padding: 15px;
+}
+
+#web-development h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Tutoring Projects */
+#tutoring .project {
+    background-color: #e0e0e0; /* Different background for Tutoring projects */
+    padding: 15px;
+}
+
+#tutoring h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+/* General styling for all apps */
+input, button {
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #821191;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #3d0538;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
