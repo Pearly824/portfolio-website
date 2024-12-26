@@ -484,7 +484,7 @@ nav {
         position: absolute;
         top: 60px; /* Adjust this based on the header height */
         right: 0;
-        background: #fff;
+        background: rgb(41, 41, 110);
         width: 100%;
         padding: 1rem;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
