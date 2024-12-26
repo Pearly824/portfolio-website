@@ -454,11 +454,13 @@ ul {
 }
 
 /* Basic styling for navigation */
+/* Basic navigation styling */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    background: #fff;
 }
 
 .nav-links {
@@ -474,27 +476,40 @@ nav {
     font-size: 1.5rem;
 }
 
-/* Responsive for smaller screens */
+/* Mobile styles */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 100%;
+        top: 60px; /* Adjust this based on the header height */
         right: 0;
-        background: white;
+        background: #fff;
         width: 100%;
         padding: 1rem;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
     }
 
     .nav-links.active {
         display: flex;
+        transform: translateX(0);
     }
 
     .hamburger {
         display: block;
     }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
 }
+
 
 
