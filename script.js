@@ -1,8 +1,17 @@
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
+const navItems = document.querySelectorAll('.nav-links li a'); // Select all menu links
 
+// Toggle the menu when clicking the hamburger
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+});
+
+// Close the menu when clicking any menu item
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
 });
 
 
