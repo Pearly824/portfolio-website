@@ -53,38 +53,44 @@ Outside of coding and teaching, I enjoy singing, dancing, and expressing creativ
     <div class="projects-grid">
         <!-- Calculator -->
         <div class="project">
-            <img src="projs/calculator.png" alt="Calculator Project">
             <h4>Calculator</h4>
+            <img src="projs/calculator.png" alt="Calculator Project">
+            
             <button onclick="window.location.href='calculator.html'">View Project</button>
         </div>
         <!-- To-Do List -->
         <div class="project">
-            <img src="projs/todo app.png" alt="To-Do List Project">
             <h4>To-Do List</h4>
+            <img src="projs/todo app.png" alt="To-Do List Project">
+            <p>Organize your daily tasks effortlessly. Add, edit, and manage your to-do lists with a sleek and intuitive interface!</p>
             <button onclick="window.location.href='to-do.html'">View Project</button>
         </div>
         <!-- Recipe Finder -->
         <div class="project">
-            <img src="projs/recipe.png" alt="Recipe Finder Project">
             <h4>Recipe Finder</h4>
+            <img src="projs/recipe.png" alt="Recipe Finder Project">
+            <p>Discover delicious recipes tailored just for you. Search, save, and cook your favorites with ease!</p>
             <button onclick="window.location.href='recipe.html'">View Project</button>
         </div>
         <!-- Weather App -->
         <div class="project">
-            <img src="projs/weather.png" alt="Weather App Project">
             <h4>Weather App</h4>
+            <img src="projs/weather.png" alt="Weather App Project">
+            <p>Stay prepared with real-time weather updates. Get accurate forecasts and insights at your fingertips!</p>
             <button onclick="window.location.href='weather.html'">View Project</button>
         </div>
         <!-- English Grammar Checker -->
         <div class="project">
-            <img src="projs/english.png" alt="English Grammar Checker Project">
             <h4>English Grammar Checker</h4>
+            <img src="projs/english.png" alt="English Grammar Checker Project">
+            <p>Enhance your English proficiency with this dynamic and interactive tool. Perfect your grammar, expand your vocabulary, and conquer pronunciation through fun and engaging exercises designed for learners at all levels. The ultimate resource for mastering the universal language!</p>
             <button onclick="window.location.href='english.html'">View Project</button>
         </div>
         <!-- Math Quiz -->
         <div class="project">
-            <img src="projs/maths.png" alt="Interactive Math Quiz Project">
             <h4>Interactive Math Quiz</h4>
+            <img src="projs/maths.png" alt="Interactive Math Quiz Project">
+            <p>Challenge your mathematical skills with an interactive and engaging app. Sharpen your abilities through quizzes, tests, and learning modules tailored to suit every skill level. A perfect companion for students and enthusiasts alike.</p>
             <button onclick="window.location.href='maths.html'">View Project</button>
         </div>
     </div>
@@ -136,10 +142,34 @@ Outside of coding and teaching, I enjoy singing, dancing, and expressing creativ
     <section id="contact">
         <h2>Contact Me</h2>
         <img src="image3.jpeg" alt="Pearly Nchifor" class="contact-photo">
-        <p><i class="fas fa-phone"></i> Phone: +237 654811698</p>
-        <p><i class="fas fa-envelope"></i> Email: pearlynchifor0@gmail.com</p>
-        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="#">Pearly Nchifor</a></p>
+        
+        <!-- Contact Form -->
+        <form action="https://formsubmit.co/your-email@example.com" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+            </div>
+            <!-- Honeypot Field for Spam Prevention -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
     </section>
+    
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>My Blog</h2>
+        <p>Coming soon! Stay tuned for insights and tutorials on web development, English proficiency, and math tricks.</p>
+    </section>
+    
     <!-- Blog Section -->
     <section id="blog">
         <h2>My Blog</h2>

@@ -28,6 +28,16 @@ body {
     text-align: center;
     padding: 40px;
 }
+section h2 {
+    text-align: center; /* Center aligns the headings */
+    margin-bottom: 20px; /* Adds space below the heading */
+}
+
+.contact-photo,
+.about-photo {
+    display: block;
+    margin: 0 auto; /* Centers the images */
+}
 
 .profile-photo {
     width: 150px;          /* Set width */
@@ -36,6 +46,14 @@ body {
     object-fit: cover;     /* Ensure the image covers the circle area */
     margin-bottom: 20px;   /* Space between the image and text */
 }
+/* Center images */
+.profile-photo, .contact-photo {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%; /* Optional for circular photos */
+    max-width: 150px; /* Adjust size as needed */
+}
+
 
 /* Section Styling */
 section {
@@ -204,6 +222,103 @@ nav ul li a:hover {
     object-fit: cover;     /* Ensure the image covers the circle area */
     margin-bottom: 20px;   /* Space between the image and text */
 }
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.submit-button {
+    padding: 0.8rem 1.5rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Ensures all images are uniform in height */
+    object-fit: cover; /* Keeps the image proportional while covering the container */
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #0056b3;
+}
+
 
 /* Web Development Projects */
 #web-development .project {
