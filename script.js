@@ -260,8 +260,6 @@ function checkGrammar() {
 }
 
 
-// Math Quiz JavaScript
-
 let score = 0;  // Initialize score
 
 // Array of questions with answers
@@ -269,7 +267,7 @@ const questions = [
     { question: "What is 5 + 3?", answer: 8 },
     { question: "What is 7 - 2?", answer: 5 },
     { question: "What is 6 * 4?", answer: 24 },
-    { question: "What is 12 / 3?", answer: 4 },
+    { question: "What is 12 / 3?", answer: 4 }
 ];
 
 let currentQuestion = 0;  // Track the current question
@@ -284,19 +282,40 @@ function loadQuestion() {
 function checkAnswer() {
     const answer = document.getElementById('quiz-answer').value;
     const resultDiv = document.getElementById('quiz-result');
-    
-    if (parseInt(answer) === questions[currentQuestion].answer) {
+    const submitButton = document.getElementById('submit-btn');
+    const parsedAnswer = parseInt(answer);
+
+    if (isNaN(parsedAnswer)) {
+        resultDiv.innerHTML = `<p>Please enter a valid number.</p>`;
+        return;
+    }
+
+    if (parsedAnswer === questions[currentQuestion].answer) {
         score++;
         resultDiv.innerHTML = `<p>Correct!</p>`;
     } else {
         resultDiv.innerHTML = `<p>Incorrect. Try again.</p>`;
     }
-    
+
     // Move to the next question
     currentQuestion = (currentQuestion + 1) % questions.length;
     loadQuestion();
     document.getElementById('score').textContent = `Score: ${score}`;
+
+    // Disable the submit button temporarily
+    submitButton.disabled = true;
+
+    // Re-enable the submit button after 1 second (adjust the delay as necessary)
+    setTimeout(() => {
+        submitButton.disabled = false;
+    }, 1000);  // Adjust delay as needed
 }
 
 // Initial question load when the page is first loaded
 loadQuestion();
+
+// Event listener for the submit button
+document.getElementById('submit-btn').addEventListener('click', function(event) {
+    event.preventDefault();  // Prevent page reload on button click
+    checkAnswer();
+});
