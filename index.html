@@ -52,15 +52,13 @@ Outside of coding and teaching, I enjoy singing, dancing, and expressing creativ
 
     <!-- Projects Section -->
 <section id="portfolio" class="projects">
-    <h2>Projects</h2>
+    <h2>My Projects</h2>
     <div class="projects-grid">
-        <!-- Calculator -->
-        <div class="project">
-            <h4>Calculator</h4>
-            <img src="projs/calculator.png" alt="Calculator Project">
-            
-            <button onclick="window.location.href='calculator.html'">View Project</button>
-        </div>
+            <div class="projects">
+                <h4>Calculator</h4>
+                <img src="projs/calculator.png" alt="Calculator Project">
+                <button onclick="window.location.href='calculator.html'">View Project</button>
+            </div>
         <!-- To-Do List -->
         <div class="project">
             <h4>To-Do List</h4>
@@ -146,25 +144,28 @@ Outside of coding and teaching, I enjoy singing, dancing, and expressing creativ
         <h2>Contact Me</h2>
         <img src="image3.jpeg" alt="Pearly Nchifor" class="contact-photo">
         
-        <!-- Contact Form -->
-        <form action="https://formsubmit.co/your-email@example.com" method="POST" class="contact-form">
-            <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
-            </div>
-            <!-- Honeypot Field for Spam Prevention -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <button type="submit" class="submit-button">Send Message</button>
-        </form>
+       <!-- Contact Form -->
+<form action="https://formsubmit.co/pearlynchifor0@gmail.com" method="POST" class="contact-form">
+    <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+    </div>
+    <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+    </div>
+    <!-- Honeypot Field for Spam Prevention -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <!-- Redirect after form submission -->
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+    <button type="submit" class="submit-button">Send Message</button>
+</form>
+
     </section>
     
     <!-- Blog Section -->

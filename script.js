@@ -13,48 +13,83 @@ navItems.forEach(item => {
         navLinks.classList.remove('active');
     });
 });
+    
+// FORM
+    document.querySelector('.contact-form').addEventListener('submit', function (e) {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+            e.preventDefault(); // Prevent form submission
+            alert('Please fill out all the fields.');
+        } else if (!validateEmail(email)) {
+            e.preventDefault();
+            alert('Please enter a valid email address.');
+        }
+    });
+
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+
 
 
 
 // Web Development Projects
 
-// Calculator
+if (window.location.pathname.includes('calculator.html')) {
+    let currentInput = "";
+    let operator = "";
+    let previousInput = "";
 
-let currentInput = "";
-let operator = "";
-let previousInput = "";
+    const calcInput = document.getElementById("calc-input");
 
-function calc(value) {
-    // Append the clicked number to the current input
-    currentInput += value;
-    document.getElementById("calc-input").value = currentInput;
-}
-
-function operate(value) {
-    // If there's already a previous input, evaluate it
-    if (previousInput !== "" && currentInput !== "") {
-        equals();
+    function updateDisplay(value) {
+        calcInput.value = value;
     }
-    operator = value;
-    previousInput = currentInput;
-    currentInput = "";
-}
 
-function clearCalc() {
-    // Clear the current input and reset operator
-    currentInput = "";
-    previousInput = "";
-    operator = "";
-    document.getElementById("calc-input").value = "0";
-}
+    document.querySelectorAll("#calculator button").forEach(button => {
+        const value = button.getAttribute("data-value");
+        const op = button.getAttribute("data-operator");
 
-function equals() {
-    if (previousInput !== "" && currentInput !== "") {
-        let result;
+        if (value) {
+            button.addEventListener("click", () => {
+                console.log("Number clicked:", value);
+                currentInput += value;
+                updateDisplay(currentInput);
+            });
+        } else if (op) {
+            button.addEventListener("click", () => {
+                console.log("Operator clicked:", op);
+                if (previousInput && currentInput) compute();
+                operator = op;
+                previousInput = currentInput;
+                currentInput = "";
+            });
+        }
+    });
+
+    document.getElementById("equals").addEventListener("click", () => {
+        console.log("Equals clicked");
+        compute();
+    });
+    document.getElementById("clear").addEventListener("click", () => {
+        console.log("Clear clicked");
+        currentInput = "";
+        previousInput = "";
+        operator = "";
+        updateDisplay("0");
+    });
+
+    function compute() {
+        if (!previousInput || !currentInput || !operator) return;
+        console.log("Computing:", previousInput, operator, currentInput);
         const num1 = parseFloat(previousInput);
         const num2 = parseFloat(currentInput);
+        let result;
 
-        // Perform the appropriate operation
         switch (operator) {
             case "+":
                 result = num1 + num2;
@@ -66,25 +101,17 @@ function equals() {
                 result = num1 * num2;
                 break;
             case "/":
-                if (num2 === 0) {
-                    result = "Error";
-                } else {
-                    result = num1 / num2;
-                }
+                result = num2 === 0 ? "Error" : num1 / num2;
                 break;
-            default:
-                return;
         }
 
-        // Display the result
-        document.getElementById("calc-input").value = result;
-        // Reset inputs for next calculation
-        currentInput = result.toString();
-        previousInput = "";
+        console.log("Result:", result);
+        updateDisplay(result);
+        previousInput = result.toString();
+        currentInput = "";
         operator = "";
     }
 }
-
 
 // To-Do List Logic
 

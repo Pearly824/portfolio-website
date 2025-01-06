@@ -5,52 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="fontawesome-free-6.7.1-web/css/all.min.css" rel="stylesheet">
-
 </head>
 <body>
     <header>
-          
-    </header><!-- Add your existing navigation bar code here -->
-    <!-- Calculator Project Section -->
-    <section id="calculator-page" class="project-page">
-        <h1>Calculator Project</h1>
-        <p>Perform basic arithmetic calculations with this interactive calculator.</p>
-        <!-- Embed Calculator -->
+        <h1>Calculator</h1>
+    </header>
+    <main>
         <div id="calculator">
             <input id="calc-input" type="text" placeholder="0" disabled>
             <div>
-                <button onclick="calc('1')">1</button>
-                <button onclick="calc('2')">2</button>
-                <button onclick="calc('3')">3</button>
-                <button onclick="operate('+')">+</button>
+                <button data-value="1">1</button>
+                <button data-value="2">2</button>
+                <button data-value="3">3</button>
+                <button data-operator="+">+</button>
             </div>
             <div>
-                <button onclick="calc('4')">4</button>
-                <button onclick="calc('5')">5</button>
-                <button onclick="calc('6')">6</button>
-                <button onclick="operate('-')">-</button>
+                <button data-value="4">4</button>
+                <button data-value="5">5</button>
+                <button data-value="6">6</button>
+                <button data-operator="-">-</button>
             </div>
             <div>
-                <button onclick="calc('7')">7</button>
-                <button onclick="calc('8')">8</button>
-                <button onclick="calc('9')">9</button>
-                <button onclick="operate('*')">*</button>
+                <button data-value="7">7</button>
+                <button data-value="8">8</button>
+                <button data-value="9">9</button>
+                <button data-operator="*">*</button>
             </div>
             <div>
-                <button onclick="calc('0')">0</button>
-                <button onclick="clearCalc()">C</button>
-                <button onclick="equals()">=</button>
-                <button onclick="operate('/')">/</button>
+                <button data-value="0">0</button>
+                <button id="clear">C</button>
+                <button id="equals">=</button>
+                <button data-operator="/">/</button>
             </div>
         </div>
-    </section>
-    <!-- Footer -->
+    </main>
     <footer>
-        <button onclick="window.location.href='index.html#projects'">Back Button</button>
+        <button onclick="window.location.href='index.html'">Back to Home</button>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
